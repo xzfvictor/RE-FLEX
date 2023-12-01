@@ -26,14 +26,21 @@ except:
     print("Please set the user agent")
     exit()
 
-APP_NAME = "com.amazon.rabbit"
-APP_VERSION = "303338310"
-DEVICE_NAME = "Le X522"
-MANUFACTURER = "LeMobile"
-OS_VERSION = "LeEco/Le2_NA/le_s2_na:6.0.1/IFXNAOP5801910272S/61:user/release-keys"
-USER_AGENT = ua
+#APP_NAME = "com.amazon.rabbit"
+#APP_VERSION = "303338310"
+#DEVICE_NAME = "Le X522"
+#MANUFACTURER = "LeMobile"
+#OS_VERSION = "LeEco/Le2_NA/le_s2_na:6.0.1/IFXNAOP5801910272S/61:user/release-keys"
 
-DEVICE_TYPE = "A1MPSLFC7L5AFK"
+USER_AGENT = "AmazonWebView/Amazon Flex/0.0/iOS/15.7.8/iPhone"
+APP_NAME = "Amazon Flex"
+APP_VERSION = "0.0"
+DEVICE_NAME = "iPhone"
+MANUFACTURER = "APPLE"
+OS_VERSION = "15.7.8"
+
+
+DEVICE_TYPE = "A3NWHXTQ4EBCZS"
 device_serial = uuid.uuid4().hex.upper()
 device_id = secrets.token_hex(8)
 code_verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).rstrip(b'=').decode()
@@ -87,7 +94,7 @@ def register_account(maplanding_url):
             "client_domain": "DeviceLegacy"
         },
         "cookies": {
-            "domain": ".amazon.com",
+            "domain": ".amazon.com.au",
             "website_cookies": []
         },
         "device_metadata": {
@@ -109,7 +116,7 @@ def register_account(maplanding_url):
             "device_type": DEVICE_TYPE,
             "domain": "Device",
             "os_version": OS_VERSION,
-            "software_version": "130050002"
+            "software_version": "1"
         },
         "requested_extensions": [
             "device_info",
