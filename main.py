@@ -11,7 +11,7 @@ from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives import hashes
 from signature_headers import signature_headers
 
-MARKETPLACE = "ATVPDKIKX0DER"
+MARKETPLACE = "A39IBJ37TRP1C6"
 
 ver = get_flex_version()
 if not ver:
