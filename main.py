@@ -149,7 +149,7 @@ def get_offer_list(rejected_ids: set):
     start = time.time()
     response = amz_request(
         method="post", 
-        url="https://flex-capacity-na.amazon.com/GetOffersForProviderPost",
+        url="https://flex-capacity-jp.amazon.com/GetOffersForProviderPost",
         json=json_data.search_json_data,
         session=session
     )
@@ -273,7 +273,7 @@ def accept_block(block):
     global session
     accept = amz_request(
         method="post", 
-        url="https://flex-capacity-na.amazon.com/AcceptOffer",
+        url="https://flex-capacity-jp.amazon.com/AcceptOffer",
         json=json_data.accept_json_data(block["offerId"]),
         session=session,
         sign_request=True
@@ -283,7 +283,7 @@ def accept_block(block):
         sign_request(private_key, "/AcceptOffer")
         accept = amz_request(
             method="post", 
-            url="https://flex-capacity-na.amazon.com/AcceptOffer",
+            url="https://flex-capacity-jp.amazon.com/AcceptOffer",
             json=json_data.accept_json_data(block["offerId"]),
             session=session,
             sign_request=True
@@ -338,7 +338,7 @@ def validate_captcha(validationId: str) -> bool:
     }
     res = amz_request(
         method="post",
-        url="https://flex-capacity-na.amazon.com/ValidateChallenge",
+        url="https://flex-capacity-jp.amazon.com/ValidateChallenge",
         json=data,
         session=session,
         sign_request=True
@@ -348,7 +348,7 @@ def validate_captcha(validationId: str) -> bool:
         sign_request(private_key, "/ValidateChallenge")
         res = amz_request(
             method="post",
-            url="https://flex-capacity-na.amazon.com/ValidateChallenge",
+            url="https://flex-capacity-jp.amazon.com/ValidateChallenge",
             json=data,
             session=session,
             sign_request=True
