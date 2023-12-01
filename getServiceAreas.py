@@ -14,7 +14,7 @@ def getEligibleServiceAreas():
     header_data.headers["X-Amz-Date"] = __getAmzDate()
     response = amz_request(
         method="get", 
-        url="https://flex-capacity-na.amazon.com/eligibleServiceAreas"
+        url="https://flex-capacity-jp.amazon.com/eligibleServiceAreas"
     )
     return response.json().get("serviceAreaIds")
 
@@ -23,7 +23,7 @@ def getAllServiceAreas():
     header_data.headers["X-Amz-Date"] = __getAmzDate()
     serviceAreaPoolList = amz_request(
         method="get", 
-        url="https://flex-capacity-na.amazon.com/getOfferFiltersOptions"
+        url="https://flex-capacity-jp.amazon.com/getOfferFiltersOptions"
     ).json().get("serviceAreaPoolList")
     with open("userdata/serviceAreaIds", "w", encoding='utf-8') as s:
         #print('stationlist = {', file=s)
