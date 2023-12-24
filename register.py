@@ -87,11 +87,9 @@ def register_account(maplanding_url):
     client_id = (device_serial.encode() + device_type.encode()).hex()
     amazon_reg_data = {
         "auth_data": {
-            "client_id": client_id,
-            "authorization_code": authorization_code,
-            "code_verifier": code_verifier,
-            "code_algorithm": "SHA-256",
-            "client_domain": "DeviceLegacy"
+            "user_id_password": {
+            "password": "",
+            "user_id": ""
         },
         "cookies": {
             "domain": ".amazon.com.au",
@@ -118,7 +116,7 @@ def register_account(maplanding_url):
             "website_cookies"
         ],
         "user_context_map": {
-            "frc": generate_frc(device_id)
+            "frc": "AKE2WPDpa+NutUanJxSSPV1Yk0bhyJFrNTb6ScB0MWINZIv3KXv44I5BwjAX3sMYq1ayta19QkhlKYWi6RLkWraqa93OxN/Ls2UbYXANfbOrmSKWPFJTJTiyAHi2fQNC1g4lLBK+vJD99BJWJ3dgp0+vT3yiVhEbnt0Vtn0yKzv8FXO1iV7j7Zqd39btEBqxTXpEsQS0oMQwi9ifh/V//+LSWmhPgwFxU87cWVIr+P3QXHgcfMAQgUhewt1Rua86UD3XZh0XeCK2Va4M6nA6YGFt9ZhGwEOsDrnIrLJFmIppDoOJIUrBJ14UGSFAhNpllt526nhBk0kT0JVuThFvKBS/tvUWhlrrh/d1Cdoi1y/hT3BLuQ5bu2nK66/jh981sUAUlYpMqlOi"
         }
     }
 
