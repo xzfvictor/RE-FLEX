@@ -37,7 +37,7 @@ APP_NAME = "Amazon Flex"
 APP_VERSION = "0.0"
 DEVICE_NAME = "iPhone"
 MANUFACTURER = "APPLE"
-OS_VERSION = "15.7.8"
+OS_VERSION = "15.8"
 
 
 DEVICE_TYPE = "A3NWHXTQ4EBCZS"
@@ -97,17 +97,6 @@ def register_account(maplanding_url):
             "domain": ".amazon.com.au",
             "website_cookies": []
         },
-        "device_metadata": {
-            "android_id": device_id,
-            "device_os_family": "android",
-            "device_serial": device_serial,
-            "device_type": DEVICE_TYPE,
-            "mac_address": secrets.token_hex(64).upper(),
-            "manufacturer": MANUFACTURER,
-            "model": DEVICE_NAME,
-            "os_version": "30",
-            "product": DEVICE_NAME
-        },
         "registration_data": {
             "app_name": APP_NAME,
             "app_version": APP_VERSION,
@@ -138,7 +127,7 @@ def register_account(maplanding_url):
         "User-Agent": USER_AGENT,
         "Content-Type": "application/json",
         "Accept-Charset": "utf-8",
-        "x-amzn-identity-auth-domain": "api.amazon.com",
+        "x-amzn-identity-auth-domain": "api.amazon.com.au",
         "Connection": "keep-alive",
         "Accept": "/",
         "Accept-Language": "en-US"
