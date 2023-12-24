@@ -101,7 +101,7 @@ def register_account(maplanding_url):
             "app_name": APP_NAME,
             "app_version": APP_VERSION,
             "device_model": DEVICE_NAME,
-            "device_serial": device_id,
+            "device_serial": device_serial,
             "device_type": DEVICE_TYPE,
             "domain": "Device",
             "os_version": OS_VERSION,
@@ -187,7 +187,7 @@ def get_flex_auth_token(refresh_token: str) -> str:
     }
     headers = {
         "User-Agent": USER_AGENT,
-        "x-amzn-identity-auth-domain": "api.amazon.com",
+        "x-amzn-identity-auth-domain": "api.amazon.com.au",
     }
     res = requests.post(url, json=data, headers=headers)
     if res.status_code == 400:
