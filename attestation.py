@@ -46,7 +46,7 @@ def register_attestation():
     from key_id import key_id
     headers = header_data.headers.copy()
     attestation_header_refresh(headers)
-    headers['X-Amzn-Identity-Auth-Domain'] = '.amazon.com'
+    headers['X-Amzn-Identity-Auth-Domain'] = '.amazon.com.au'
     data = {
         "deviceId": device_tokens.deviceId,
         "keyAttestation": [],
@@ -60,7 +60,7 @@ def register_attestation():
         authCycle.requestId_refresh()
         headers = header_data.headers.copy()
         attestation_header_refresh(headers)
-        headers['X-Amzn-Identity-Auth-Domain'] = '.amazon.com'
+        headers['X-Amzn-Identity-Auth-Domain'] = '.amazon.com.au'
         response = requests.post(url, headers=headers, json=data)
     if response.status_code != 200:
         print(f"Error sending request to register-attestation. Status code: {response.status_code}")
