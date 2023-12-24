@@ -41,7 +41,7 @@ OS_VERSION = "15.8"
 
 
 DEVICE_TYPE = "A3NWHXTQ4EBCZS"
-device_serial = uuid.uuid4().hex.upper()
+device_serial = "4347E00084E34635B3E0488E8331B18E"
 device_id = secrets.token_hex(8)
 code_verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).rstrip(b'=').decode()
 
